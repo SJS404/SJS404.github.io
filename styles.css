@@ -532,6 +532,8 @@ nav {
     background-color: #121274;
     padding: 2rem;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--blue-accent);
     align-content: center;
     color: var(--white);
     font-family: Orbitron;
