@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 :root {
     --blue-accent: #121274;
     --medium-blue: #020fc8ff;
@@ -10,59 +12,68 @@
     --slate: #708090ff;
     --white: #ffffffff;
 }
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu", "Orbitron", sans-serif;
     
 }
 
-
-main {
-    padding-inline: 10%;
-    
+html {
+    min-width: 100%;
 }
 nav {
     background-color: var(--white);
-    display: flex;
     border-bottom: 2px solid var(--medium-blue);
     
 }
 
 .navbar {
-    min-width: 50%;
-    margin-block: 1.5rem;
-    margin-left: auto;
-    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
 
+.navbar .logo img{
+    max-width: 200px;
+    height:auto;
+    
 }
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
+}
+.navigation-links {
+    display: flex;
+    flex-wrap: wrap;   
     list-style: none;
     font-size: 1.5rem;
     font-weight: 800;
-    justify-content: space-between;
-    margin: 0;
+    gap: 2rem;
     align-items: center;
+    justify-content: flex-end;
     
 }
 
-.nav-links ul {
+.navigation-links ul {
     
     cursor: pointer;
 }
-.nav-links li a {
+.navigation-links li a {
     
     color: var(--blue-accent);
     text-decoration: none;
-
+    font-family: Orbitron;
+    
 }
 
-.nav-links li a:hover {
+.navigation-links li a:hover {
     color: var(--risd-blue);
     font-size: 1.75rem;
 }
@@ -77,7 +88,7 @@ nav {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* Modal content */
@@ -93,11 +104,12 @@ nav {
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
-    gap: 1.5rem;
+    gap: 5rem;
     
 }
 
 .modal-content p {
+    max-width: 35ch;
     text-align: center;
     font-weight: 400;
     font-size: 1rem;
@@ -140,9 +152,7 @@ nav {
 .contact-btn {
     display: inline-block;
     padding: 10px 20px;
-    /* font-size: 16px; */
     font-weight: bold;
-    /* color: white; */
     background-color: var(--pale-azure);
     border: none;
     border-radius: 25px;
@@ -163,7 +173,6 @@ nav {
     justify-content: flex-end;
     list-style: none;
     gap: 1rem;
-    margin-top: 20px;
 
 
     img {
@@ -186,6 +195,7 @@ nav {
     align-items: flex-start;
     gap: 2rem;
     padding: 10%;
+    
 
     button {
         padding: 20px;
@@ -210,26 +220,39 @@ nav {
 .summary {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
     gap: 2rem;
-    background-color: rgba(203, 211, 255, .2);
+    background-color: rgba(203, 211, 255, .5);
     color: white;
     padding: 50px;
     border-radius: 50px;
-    
     text-transform: capitalize;
 
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
+}
+
+@media screen and (max-width: 1000px){
     
+    .summary {
+        max-width:100%;
+    }
 
 }
 
 
+.summary h1 {
+    text-decoration: underline var(--medium-blue);
+    font-size: 3rem;
+    font-family: Orbitron;
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    font-weight: 400;   
+}
+
+.summary p{
+    font-size: 1.75rem;
+}
 
 .about {
     padding: 50px 20%;
@@ -269,9 +292,9 @@ nav {
 }
 
 .tech {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
-    padding: 50px 25px;
+    padding: 50px 0 50px 0;
     justify-content: space-evenly;
     overflow-x: hidden;
     gap: 4rem;
@@ -377,8 +400,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block: 50px;
-    border: 2px solid var(--blue-accent);
+    /* margin-block: 50px; */
+    padding: 2rem;
+    /* border: 2px solid var(--blue-accent); */
     
 }
 
@@ -486,10 +510,12 @@ nav {
 
 
 .previous {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 10px 24px;
+    padding: 2rem 10%;
     gap: 4rem;
     /* border: 2px solid pink; */
     
@@ -502,6 +528,39 @@ nav {
     padding: 5rem 5%;
 }
 
+.section h2 {
+    background-color: #121274;
+    padding: 2rem;
+    text-align: center;
+    align-content: center;
+    color: var(--white);
+    font-family: Orbitron;
+    position: relative;
+
+}
+
+.section h2:before,
+.section h2:after {
+  position: absolute;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.section h2:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(194, 111, 23, 0), white);
+  }
+  
+.section h2:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+
+
+
 .edu-wrapper {
     
     padding: 50px;
@@ -512,11 +571,15 @@ nav {
 }
 
 .edu-content {
-    border: 1px solid pink;
+    /* border: 1px solid pink;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-items: start;
 }
 
 .edu-content h3 {
@@ -534,17 +597,26 @@ nav {
 
 .cert-wrapper, 
 .cert-card {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding: 2rem;
+    
+}
+
+.cert-card {
+    border-radius: 25px;
+    background-color: var(--blue-accent);
+    color: var(--white);
+    box-shadow: 5px 5px 10px var(--slate);
 }
 
 .cert-card img {
     max-width: 300px;
     height: auto;
+    
 }
 .cert-card-ins {
     display: flex;
@@ -553,6 +625,17 @@ nav {
     gap: 1rem;    
 }
 
+.cert-card-ins > img {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.cert-card-ins .institute {
+    font-family: Orbitron;
+    font-weight: 700;
+    color: gold;
+}
 /* Try Hack Me */
 
 .thm-wrapper, 
@@ -618,17 +701,23 @@ nav {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
+    box-shadow: 5px 5px 10px var(--slate);
+    background-color: var(--blue-accent);
 }
 
 
     
 
-.course-title {
+.course-card2 .course-title {
     text-align: center;
+    font-family: Orbitron;
+    font-weight: 700;
+    color: gold;
 }
 .course-card2 .logo {
     max-width: 50%;
     height: auto;
+    
 }
 
 
@@ -647,26 +736,40 @@ nav {
     height: auto;
     border: 1px solid var(--blue-accent);
     border-radius: 25px;
+    
 
     @media screen and (max-width:800px) {
         max-width: 50%;
     }
 }
 
+
+
 .course-summary2 p {
-    color: var(--risd-blue);
+    color: var(--white);
     text-align: center;
 }
 .pro-filter {
     padding: 5rem 20%;
     font-size: 1.5rem;
-    color: var(--blue-accent);
+    color: var(--white);
+    background-color: var(--blue-accent);
+    border-top: 2px solid var(--slate);
+    border-bottom: 2px solid var(--slate);
 }
 
 .pro-filter ul {
-    list-style: none;
+    
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
+    
+}
+
+.pro-filter li, 
+.pro-card h2 {
+    font-family: Orbitron;
 }
 
 .pro-filter li:hover {
@@ -674,71 +777,61 @@ nav {
     text-decoration: underline dotted var(--medium-blue) 5px;
 }
 
+
 .pro-gallery {
-    background-color: var(--risd-blue);
-    padding: 5rem 5%;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
 }
+
 
 .pro-card {
-    /* border: 1px solid red; */
-    background-color: white;
-    border-radius:25px;
-    box-shadow: 0 0 2px 2px var(--slate);
-    padding: 2rem;
+    /* border: 2px solid red; */
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 35%;
     justify-content: space-between;
-
+    align-items: center;
+    color: var(--white);
+    background-color: var(--blue-accent);
+    box-shadow: 5px 5px 10px var(--slate);
     
-
-    a {
-        /* width: 100%; */
-        text-decoration: none;
-        font-size: 1.25rem;
-        color: var(--medium-blue)
-           
-    }
-
-    a:hover {
-        font-weight: 800;
-    }
-    img {
-        width: 25px;
-        height: auto;
-        
-     }
-    p {
-        text-wrap: wrap;
-    }
-    ul {
-        
-        display: flex ;
-        list-style: none;
-        gap: 1rem;
-    }
-    
-    
-
 }
 
-.pro-content {
-        display: flex;
-        gap: 2rem;
+.pro-card img {
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
 
-        img {
-            width: 100px;
-            height: 100px;
-            border-radius: 100%;
-            
-         }
-    }
+.pro-card ul  {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+}
+
+.pro-card ul img {
+    
+    max-height: 2.5rem;
+    width: auto;
+    margin-bottom: 1rem;
+    filter: invert(50%);
+}
+
+.pro-card p {
+    padding-inline: 2rem;
+}
+
+.pro-card a {
+    text-decoration: none;
+    color: var(--vivid-sky-blue);
+}
 
 footer {
     width: 100%;
