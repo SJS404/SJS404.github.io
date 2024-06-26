@@ -4,63 +4,100 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Simon Schofield - Homelab</title>
+        <link rel="icon" type="image/x-icon" href="assets/Favicon.png">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <header>
-        <nav>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="/"><img src="assets/Logo.png" alt="Simon Schofield Logo"></a>
+    
+    <body>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="/"><img src="assets/Logo.png" alt="Simon Schofield Logo"></a>
+                    </div>
+                    <div class="nav-links">
+
+                        <ul class="navigation-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="work.html">Resume</a></li>
+                            <li><a href="learning.html">Learning</a></li>
+                            <li><a href="homelab.html">Homelab</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="#contact-modal" class="contact-btn">Contact</a></li>
+
+                            <div id="contact-modal" class="modal">
+                                <div class="modal-content">
+                                    <a href="#" class="close-button">&times;</a>
+                                    <h2>Contact Me</h2>
+                                    <p>Get in touch to connect, collaborate or just say hello. I'm open to new  opportunities and experience within the field, as well as meeting new people.</p>
+                                    <div class="contact-social"><a href="https://m.me/simon.schofield6253" target="_blank"><img src="assets/social/messenger.png" alt="Messenger"></a>
+                                    <a href="https://wa.me/447795833084" target="_blank"><img src="assets/social/whatsapp.png" alt="Whatsapp"></a>
+                                    <a href="mailto:s.schofield88@googlemail.com?subject=Testing Portfolio Email Link" target="_blank"><img src="assets/social/gmail.png" alt="Email"></a></div>
+                                </div>
+                            </div>
+
+                        </ul>
+
+                        <ul class="nav-social">
+                            <li><a href="https://www.facebook.com/simon.schofield6253"><img src="assets/social/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="https://www.linkedin.com/in/simon-schofield88/"><img src="assets/social/linkedin.png" alt="Linkedin"></a></li>
+                            <li><a href="https://github.com/SJS404"><img src="assets/social/github.png" alt="Github"></a></li>
+                        </ul>
+
+                    
+                    </div>
+
                 </div>
-                <div class="nav-links">
-                    <ul class="navigation-links">
+
+                <label class="hamburger-menu">
+                    <input type="checkbox">
+                </label>
+                
+                <div class="sidebar">
+
+                    <span> </span>
+                    
+                    <ul class="hamburger-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="work.html">Resume</a></li>
                         <li><a href="learning.html">Learning</a></li>
                         <li><a href="homelab.html">Homelab</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="#contact-modal" class="contact-btn">Contact</a></li>
-
-                        <!-- contact modal -->
-                        <div id="contact-modal" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close-button">&times;</a>
-                                <h2>Contact Me</h2>
-                                <p>Get in touch to connect, collaborate or just say hello. I'm open to new  opportunities and experience within the field, as well as meeting new people.</p>
-                                <div class="contact-social"><a href="https://m.me/simon.schofield6253" target="_blank"><img src="assets/social/messenger.png" alt="Messenger"></a>
-                                <a href="https://wa.me/447795833084" target="_blank"><img src="assets/social/whatsapp.png" alt="Whatsapp"></a>
-                                <a href="mailto:s.schofield88@googlemail.com?subject=Testing Portfolio Email Link" target="_blank"><img src="assets/social/gmail.png" alt="Email"></a></div>
-                            </div>
-                        </div>
                     </ul>
-                    <ul class="nav-social">
-                        <li><a href="https://www.facebook.com/simon.schofield6253"><img src="assets/social/facebook.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.linkedin.com/in/simon-schofield88/"><img src="assets/social/linkedin.png" alt="Linkedin"></a></li>
-                        <li><a href="https://github.com/SJS404"><img src="assets/social/github.png" alt="Github"></a></li>
-                    </ul>
-                </div>    
-            </div>
-        </nav>
-    </header>
-    <body>
-        <div class="hero">
-            <div class="summary">
-                <h1>Homelab</h1>
-            </div>
-            <style>.hero{ 
-                background-image: url(assets/backgrounds/setup.jpg);
-                background-position: center;
-                background-size: cover;
-                background-blend-mode: overlay;
-            }
-            </style>
-        </div>
-        
 
+                    <span></span>
+
+                    <div class="hamburger-social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/simon.schofield6253"><img src="assets/social/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="https://www.linkedin.com/in/simon-schofield88/"><img src="assets/social/linkedin.png" alt="Linkedin"></a></li>
+                            <li><a href="https://github.com/SJS404"><img src="assets/social/github.png" alt="Github"></a></li> 
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <div class="summary">
+                    <h1>Homelab</h1>
+                </div>
+                <style>.hero{ 
+                    background-image: url(assets/backgrounds/setup.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-blend-mode: overlay;
+                }
+                </style>
+            </div>
+        </main>
+        <footer>
+            <span></span>
+        </footer>
     </body>
-    <footer>
-        <span></span>
-    </footer>
+    
 </html>
