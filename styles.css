@@ -1132,6 +1132,11 @@ footer {
     .previous {
         grid-template-columns: 1fr;
     }
+
+    .job-previous {
+        max-width: 95vw;
+    }
+
     .pro-filter {
         
     }
