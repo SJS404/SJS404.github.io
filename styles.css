@@ -42,7 +42,7 @@ header {
     z-index: 50;
 }
 nav {
-    background-color: var(--white);
+    background-color: white;
     border-bottom: 2px solid var(--medium-blue);  
 }
 
@@ -92,10 +92,10 @@ nav {
     
 }
 
-.navigation-links li a:hover {
+.navigation-links li:hover {
     
     color: var(--risd-blue);
-    font-size: 1.75rem;
+    scale: 1.2;
     text-decoration: underline 5px;
     transition: var(--animation-timing);
     
@@ -186,6 +186,7 @@ nav {
 .contact-btn:hover {
     background-color: var(--blue-accent);
     color: var(--white) !important;
+    text-decoration: underline 5px;
     transition: var(--animation-timing);
     
 }
@@ -413,14 +414,16 @@ border: none;
     background-color: var(--blue-bg);
     padding: 2rem;
 
-    img {
-        background-color: black;
-        border-radius: 50px;
-        padding: 2px;
-        width: 50px;
-        height: auto;
-     }
 }
+
+.about img {
+    background-color: black;
+    border-radius: 50px;
+    padding: 2px;
+    width: 50px;
+    height: auto;
+}
+
 
 .about-card {
     display: flex;
@@ -436,29 +439,28 @@ border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 40%;
+    
     gap: 1rem;
     padding: 2rem;
-    
-    #position {
-        color: var(--blue-accent);
-    }
-    
-}
+}  
 
-.about-profile img:hover {
-    
-    filter: drop-shadow(2px 2px 6px var(--blue-accent));
-    }
+.about-profile #position {
+    color: var(--blue-accent);
+}
 
 .about-profile .self-image {
     width: 100%;
     height: auto;
     filter: grayscale();
 }
+.about-profile img:hover {
+    
+    filter: drop-shadow(2px 2px 6px var(--blue-accent));
+    }
+
+
 
 .about-content {
-    max-width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -555,7 +557,6 @@ border: none;
 .skill-card {
     display: flex;
     flex-direction: column;
-    flex: 1;
     align-items: center;
     border-radius: 50px;
     box-shadow: 5px 5px 5px 5px grey;
@@ -591,8 +592,7 @@ border: none;
 }
 
 
-.job-current,
-.job-previous {
+.job-current {
     border: 5px solid var(--blue-accent);
     border-radius: 25px;
     box-shadow: 5px 5px 10px var(--slate);
@@ -602,72 +602,173 @@ border: none;
     padding: 2rem;
     gap: 1rem;
     background-color: var(--white);
-
-    .job-skills, 
-    .workplace {
-        display: flex;
-        gap: .5rem;
-        padding: 1rem 2rem;
-    }
-    
-    .workplace {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .company {
-        font-family: Orbitron;
-        text-align: center;
-        text-decoration: underline;
-        color: var(--blue-accent);
-        font-size: 1.5rem;
-    }
-
-    .job-logo {
-        
-        margin: 1rem;
-        width: auto;
-        height: 5rem;
-    }
-    
-    .job-skills {
-        display: flex;
-        justify-content: space-evenly;
-
-        .js-card {
-            display: flex;
-            flex-direction: column;
-            padding: .5rem;
-            align-items: center;
-            
-            .js-drop {
-                font-family: Orbitron;
-                font-size: .75rem;
-                font-weight: 700;
-                text-align: center;
-                color: var(--slate);
-            }
-
-            img {
-                height: 50px;
-                width: 50px;
-            }
-
-            &:hover {
-                scale: 1.25;
-                transition: var(--animation-timing)
-            }
- 
-        }
-    }
-
 }
 
-.job-logo {
+
+.job-current .job-skills, 
+.job-current .workplace {
+    display: flex;
+    gap: .5rem;
+    padding: 1rem 2rem;
+}
+    
+.job-current .workplace {
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-current .company {
+    font-family: Orbitron;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--blue-accent);
+    font-size: 1.5rem;
+}
+
+.job-current .job-logo {
+    
+    margin: 1rem;
+    width: auto;
+    height: 5rem;
+}
+    
+.job-current .job-skills {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.job-current .js-card {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    align-items: center;
+}
+    
+.job-current .js-drop {
+    
+    font-size: .75rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--slate);
+    font-family: Orbitron;
+}
+
+.job-current img {
     height: 50px;
     width: 50px;
 }
 
+.job-current img:hover {
+    scale: 1.25;
+    transition: va(--animation-timing)
+
+}
+ 
+.job-previous {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: var(--blue-accent);
+    box-shadow: 5px 5px 10px var(--slate);
+
+}
+.job-previous .company-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom: 2px solid var(--slate);
+}
+
+
+.job-previous .workplace {
+    display: flex;
+    flex-direction: column;
+}
+
+.job-previous .workplace .company,
+.job-previous .workplace .position,
+.job-previous .workplace .date {
+    text-align: center;
+    padding: .5rem;
+    
+}
+
+.job-previous .workplace .company {
+    padding: 2rem;
+    color: white;
+}
+
+.job-previous .workplace .company:hover {
+    text-shadow: var(--slate) 1px 0 10px;
+}
+
+.job-previous .workplace .position {
+    color: gold;
+    font-style: italic;
+    
+}
+
+.job-previous .workplace .date {
+    color: var(--azure);
+    font-weight: 500;
+    font-family: Orbitron;
+}
+
+.job-previous p,
+.job-previous .job-skills {
+    padding: 2rem;
+}
+.job-previous .workplace .company {
+    font-family: Orbitron;
+    font-size: 2rem;
+    text-decoration: underline var(--azure);
+}
+
+.job-previous  .job-logo {
+    height: 6rem;
+    width: auto;
+}
+
+.job-previous .job-skills {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.job-previous .js-card {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    align-items: center;
+    width: 75px;
+}
+    
+.job-previous .js-drop {
+    font-family: Orbitron;
+    font-size: .7rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--azure);
+}
+
+.job-previous .job-skills img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.job-skills img:hover {
+    scale: 1.25;
+    transition: var(--animation-timing)
+}
 
 .previous {
     display: grid;
@@ -939,7 +1040,6 @@ border: none;
     /* border: 1px solid green; */
     border-radius: 25px;
     display: flex;
-    max-width: 95vw;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -1046,6 +1146,7 @@ border: none;
 
 .pro-card h2 {
     font-family: Orbitron;
+    font-size: 2rem;
 }
 
 
@@ -1081,6 +1182,7 @@ border: none;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    
 }
 
 .pro-card ul  {
@@ -1097,15 +1199,20 @@ border: none;
     
     height: 1.5rem;
     width: auto;
+    filter: brightness(0) invert(1);
     
 }
-
+ .pro-logo {
+    border-bottom: 2px solid var(--slate);
+ }
 .pro-card p {
-    padding-inline: 2rem;
+    padding: 2rem;
 }
 
 .pro-card a {
-    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: underline var(--azure);
     color: var(--vivid-sky-blue);
 }
 
@@ -1126,6 +1233,21 @@ footer {
         justify-content: center;
     }
 
+    .about-profile {
+        padding: 1rem;
+    }
+    .about-profile .self-image {
+        width: 300px;
+    }
+
+    .key-skills {
+        grid-template-columns: 1fr;
+    }
+    .skill-card {
+        justify-content: center;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
     .about-card {
         flex-direction: column;
     }
@@ -1133,15 +1255,7 @@ footer {
     .previous {
         grid-template-columns: 1fr;
     }
-
-    .job-previous {
-        max-width: 95vw;
-    }
-
-    .pro-filter {
-        
-    }
-
+    
     .course-summary {
         justify-content: center;
     }
