@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterItems = document.querySelectorAll('.filter-item');
     const proCards = document.querySelectorAll('.pro-card');
-    const excludedFilters = ["Software", "Networking", "Coding"];
+    const excludedFilters = ["Hardware", "Software", "Networking", "Coding"];
 
     filterItems.forEach(item => {
         item.addEventListener('click', function() {

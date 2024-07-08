@@ -42,7 +42,7 @@ header {
     z-index: 50;
 }
 nav {
-    background-color: white;
+    
     border-bottom: 2px solid var(--medium-blue);  
 }
 
@@ -53,6 +53,7 @@ nav {
     align-items: center;
     padding: 1rem 2rem;
     position: relative;
+    background-color: white;
 }
 
 .navbar .logo img{
@@ -92,6 +93,7 @@ nav {
     
 }
 
+.navigation-links li:focus-within,
 .navigation-links li:hover {
     
     color: var(--risd-blue);
@@ -162,7 +164,7 @@ nav {
 }
 
 .close-button:hover,
-.close-button:focus {
+.close-button:focus-within {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -183,6 +185,7 @@ nav {
     cursor: pointer;
 }
 
+.contact-btn:focus-within,
 .contact-btn:hover {
     background-color: var(--blue-accent);
     color: var(--white) !important;
@@ -280,10 +283,12 @@ nav {
 .sidebar {
 
     display: none;
-    position: relative;
-    
-    height: 100vh;
-    margin-top: -100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
     margin-inline: auto;
     z-index: 9998;
     flex-direction: column;
@@ -359,6 +364,8 @@ border: none;
     height:1.5rem;
     width:auto;
 }
+
+.hero button:focus-within,
 .hero button:hover {
     background-color: var(--medium-blue);
     color: var(--white);
@@ -429,6 +436,7 @@ border: none;
     display: flex;
     align-items: center;
     padding: 2rem;
+    gap: 1rem;
     border-radius: 25px;
     background-color: var(--white);
     max-width: 1100px;
@@ -453,12 +461,12 @@ border: none;
     height: auto;
     filter: grayscale();
 }
+
+.about-profile img:focus-within,
 .about-profile img:hover {
     
     filter: drop-shadow(2px 2px 6px var(--blue-accent));
-    }
-
-
+}
 
 .about-content {
     display: flex;
@@ -1043,11 +1051,20 @@ border: none;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 2rem;
+    /* padding: 2rem; */
     box-shadow: 5px 5px 10px var(--slate);
     background-color: var(--white);
 }
 
+.course-card2 .logo {
+    background-color: #121274;
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+}
 
     
 
@@ -1057,11 +1074,11 @@ border: none;
     font-weight: 700;
     color: gold;
 }
-.course-card2 .logo {
+/* .course-card2 .logo {
     max-width: 50%;
     height: auto;
     
-}
+} */
 
 
 
@@ -1139,7 +1156,7 @@ border: none;
     gap: 2rem;
     padding-block: 2rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     
 }
@@ -1244,10 +1261,12 @@ footer {
         grid-template-columns: 1fr;
     }
     .skill-card {
-        justify-content: center;
-        padding: 0.5rem;
+        justify-content: space-evenly;
+        padding: 1rem;
         gap: 0.5rem;
     }
+
+
     .about-card {
         flex-direction: column;
     }
